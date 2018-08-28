@@ -1,0 +1,13 @@
+{
+	"variables": {
+		"user": "{{ env `USER` }}",
+		"host": "{{ env `HOST` }}"
+	},
+	"builders": [
+		{
+			"type": "file",
+			"content": "hello {{ user `user` }}@{{user `host`}}",
+			"target": "output"
+		}
+	]
+}
